@@ -39,6 +39,7 @@ cp %{SOURCE2} .
 xz -d texlive.tlpdb.xz
 
 %patch0 -p1
+perl -pi -e 's%\bRELOC\b%%{_datadir}/texmf-dist%;' texlive.tlpdb
 
 #-----------------------------------------------------------------------
 %build
