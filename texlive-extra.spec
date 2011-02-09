@@ -35,6 +35,9 @@ many languages around the world.
 #-----------------------------------------------------------------------
 %prep
 %setup -q -n texlive-20100826-extra
+cp %{SOURCE2} .
+xz -d texlive.tlpdb.xz
+
 %patch0 -p1
 
 #-----------------------------------------------------------------------
@@ -53,8 +56,6 @@ chmod +x %{buildroot}%{_datadir}/texmf/tlpkg/installer/config.guess
 
 cp -far doc.html index.html LICENSE* README release*txt readme*.dir %{buildroot}%{_datadir}/texmf/tlpkg
 cp -far tlpkg/* %{buildroot}%{_datadir}/texmf/tlpkg
-cp -far %{SOURCE2} %{buildroot}%{_datadir}/texmf/tlpkg
-xz -d %{buildroot}%{_datadir}/texmf/tlpkg/texlive.tlpdb.xz
 
 #-----------------------------------------------------------------------
 %clean
