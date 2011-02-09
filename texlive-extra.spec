@@ -51,7 +51,7 @@ mkdir -p %{buildroot}%{_datadir}/texmf/tlpkg/{backups,installer}
 cat > %{buildroot}%{_datadir}/texmf/tlpkg/installer/config.guess << EOF
 #!/bin/sh
 
-echo linux-%{_arch}-mandriva
+echo linux-%{_arch}
 EOF
 chmod +x %{buildroot}%{_datadir}/texmf/tlpkg/installer/config.guess
 
