@@ -8,6 +8,7 @@ URL:		http://tug.org/texlive/
 Source0:	ftp://tug.org/historic/systems/texlive/2010/texlive-20100826-extra.tar.xz
 Source1:	ftp://tug.org/historic/systems/texlive/2010/texlive-20100826-extra.tar.xz.sha256
 Source2:	http://linorg.usp.br/CTAN/systems/texlive/tlnet/tlpkg/texlive.tlpdb.xz
+Source3:	tlpdb-patch.pl
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 
@@ -39,10 +40,11 @@ cp %{SOURCE2} .
 xz -d texlive.tlpdb.xz
 
 %patch0 -p1
-perl -pi -e 's%\bRELOC\b%%{_datadir}/texmf-dist%;' texlive.tlpdb
 
 #-----------------------------------------------------------------------
 %build
+mv texlive.tlpdb{,.orig}
+cat texlive.tlpdb.orig | %{SOURCE3} %{_arch} > texlive.tlpdb
 
 #-----------------------------------------------------------------------
 %install
