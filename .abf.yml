@@ -1,0 +1,6 @@
+sources:
+  "installer.tar.bz2:"	2355d4f2f60f466f131d81107de3536b44e8f2fe
+  "texlive-20100826-extra.tar.xz:"	1755beb58a43d329c21c359b2bf9c71b426b52de
+  "texlive-20100826-extra.tar.xz.sha256:"	090e500ceb9c90171d3f4b6cfd449af6cdd1e7e1
+  "texlive.tlpdb.xz:"	af56df02114220f9998913a0ab49b1ab138bd809
+  "tlpdb-patch.pl:"	e051335b84063b7585398d23f823c79a37fc144d

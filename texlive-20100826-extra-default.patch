@@ -1,0 +1,30 @@
+--- texlive-20100826-extra/tlpkg/TeXLive/TLConfig.pm.orig	2011-02-09 16:43:17.718702261 -0200
++++ texlive-20100826-extra/tlpkg/TeXLive/TLConfig.pm	2011-02-09 16:43:44.528702861 -0200
+@@ -157,13 +157,13 @@ our %TLPDBOptions = (
+     [ "b", 1, "postcode",
+       "Run postinst code blobs" ],
+   "sys_bin" =>
+-    [ "p", "/usr/local/bin", "sys_bin",
++    [ "p", "/usr/bin", "sys_bin",
+       "Destination for symlinks for binaries" ],
+   "sys_info" =>
+-    [ "p", "/usr/local/info", "sys_info",
++    [ "p", "/usr/share/info", "sys_info",
+       "Destination for symlinks for info docs" ],
+   "sys_man" =>
+-    [ "p", "/usr/local/man", "sys_man",
++    [ "p", "/usr/share/man", "sys_man",
+       "Destination for symlinks for man pages" ],
+   "w32_multi_user" =>
+     [ "b", 0, "multiuser",
+--- texlive-20100826-extra/tlpkg/TeXLive/TLMedia.pm.orig	2011-02-09 16:41:00.496702357 -0200
++++ texlive-20100826-extra/tlpkg/TeXLive/TLMedia.pm	2011-02-09 16:41:08.886703142 -0200
+@@ -57,7 +57,7 @@ sub new
+     if ($location =~ m,file://*(.*)$,) {
+       $location = "/$1";
+     }
+-    if (-d "$location/texmf/web2c") {
++    if (-d "$location/web2c") {
+       $media = 'DVD';
+     } elsif (-d "$location/$Archive") {
+       $media = 'CD';
