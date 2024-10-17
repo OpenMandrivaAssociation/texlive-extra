@@ -4,7 +4,7 @@ Release:	%mkrel 1
 Summary:	The TeX formatting system
 Group:		Publishing
 License:	GPLv2 and BSD and Public Domain and LGPLv2+ and GPLv2+ and LPPL
-URL:		http://tug.org/texlive/
+URL:		https://tug.org/texlive/
 Source0:	ftp://tug.org/historic/systems/texlive/2010/texlive-20100826-extra.tar.xz
 Source1:	ftp://tug.org/historic/systems/texlive/2010/texlive-20100826-extra.tar.xz.sha256
 Source2:	http://linorg.usp.br/CTAN/systems/texlive/tlnet/tlpkg/texlive.tlpdb.xz
