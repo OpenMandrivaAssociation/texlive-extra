@@ -1,6 +1,6 @@
 Name:		texlive-extra
 Version:	20100826
-Release:	%mkrel 1
+Release:	2
 Summary:	The TeX formatting system
 Group:		Publishing
 License:	GPLv2 and BSD and Public Domain and LGPLv2+ and GPLv2+ and LPPL
